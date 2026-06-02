@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A game development and graphics programming portfolio focused on technical contributions."
+    />
+    <title>Dayang Sun | Game Development Portfolio</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/data/projects.js" defer></script>
+    <script src="assets/data/skills.js" defer></script>
+    <script src="assets/data/translations.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
+  </head>
+  <body>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Go to home">
+        <span class="brand-mark">DS</span>
+        <span data-i18n="brand.name">Dayang Sun</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <div class="language-switcher" aria-label="Language switcher">
+          <button class="language-option" type="button" data-language="en" aria-pressed="true">EN</button>
+          <span aria-hidden="true">/</span>
+          <button class="language-option" type="button" data-language="zh" aria-pressed="false">中文</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section-shell" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n-html="hero.eyebrow">Game Developer <span>/</span> Game Designer</p>
+          <h1 data-i18n-html="hero.title">From design to code. <span>From concept to implementation.</span></h1>
+          <p class="hero-description" data-i18n="hero.description">
+            A technical portfolio focused on game programming, graphics,
+            engine systems, and performance-aware implementation.
+          </p>
+          <div class="hero-metrics" aria-label="Portfolio highlights">
+            <div><strong>06</strong><span data-i18n="hero.featured">Featured projects</span></div>
+            <div><strong>04</strong><span data-i18n="hero.disciplines">Core disciplines</span></div>
+            <div><strong>C++</strong><span data-i18n="hero.language">Primary language</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="engine-grid"></div>
+          <div class="engine-hud-corner corner-top-left"></div>
+          <div class="engine-hud-corner corner-top-right"></div>
+          <div class="engine-hud-corner corner-bottom-left"></div>
+          <div class="engine-hud-corner corner-bottom-right"></div>
+          <svg class="engine-diagram" viewBox="0 0 560 500" role="presentation">
+            <defs>
+              <radialGradient id="engineCoreGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#87e0c4" stop-opacity=".3" />
+                <stop offset="100%" stop-color="#87e0c4" stop-opacity="0" />
+              </radialGradient>
+              <filter id="engineGlow">
+                <feGaussianBlur stdDeviation="4" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+            <circle class="engine-core-glow" cx="280" cy="245" r="138" />
+            <g class="wire-sphere">
+              <circle cx="280" cy="245" r="112" />
+              <ellipse cx="280" cy="245" rx="112" ry="48" />
+              <ellipse cx="280" cy="245" rx="112" ry="78" />
+              <ellipse cx="280" cy="245" rx="48" ry="112" />
+              <ellipse cx="280" cy="245" rx="78" ry="112" />
+              <path d="M168 245h224" />
+              <path d="M280 133v224" />
+            </g>
+            <g class="engine-orbit orbit-one">
+              <ellipse cx="280" cy="245" rx="180" ry="106" />
+            </g>
+            <g class="engine-orbit orbit-two">
+              <ellipse cx="280" cy="245" rx="205" ry="152" />
+            </g>
+            <g class="engine-links">
+              <path d="M280 245L128 170L84 204" />
+              <path d="M280 245L420 132L477 157" />
+              <path d="M280 245L436 338L492 314" />
+              <path d="M280 245L158 366L94 335" />
+            </g>
+            <g class="engine-node node-main" transform="translate(280 245)">
+              <circle r="34" />
+              <circle r="21" />
+              <circle class="node-pulse" r="7" />
+            </g>
+            <g class="engine-node" transform="translate(128 170)"><circle r="7" /><circle r="2" /></g>
+            <g class="engine-node" transform="translate(420 132)"><circle r="7" /><circle r="2" /></g>
+            <g class="engine-node" transform="translate(436 338)"><circle r="7" /><circle r="2" /></g>
+            <g class="engine-node" transform="translate(158 366)"><circle r="7" /><circle r="2" /></g>
+            <g class="engine-data-marks">
+              <path d="M82 202h48M476 156h34M490 314h-52M93 335h65" />
+            </g>
+          </svg>
+          <div class="engine-core-label">
+            <span>REAL TIME</span>
+            <strong>ENGINE</strong>
+            <small>SYSTEM GRAPH</small>
+          </div>
+          <div class="engine-tag tag-gameplay"><span>01</span> GAMEPLAY</div>
+          <div class="engine-tag tag-rendering"><span>02</span> RENDERING</div>
+          <div class="engine-tag tag-systems"><span>03</span> SYSTEMS</div>
+          <div class="engine-tag tag-graphics"><span>04</span> GRAPHICS</div>
+          <div class="engine-chip chip-cpp">C++</div>
+          <div class="engine-chip chip-ue">UE5</div>
+          <div class="engine-status"><i></i> RUNTIME ACTIVE <span>60 FPS</span></div>
+        </div>
+      </section>
+
+      <section class="about section-shell section-block" id="about">
+        <div class="section-heading">
+          <p class="section-index" data-i18n="about.index">01 / ABOUT</p>
+          <h2 data-i18n="about.title">Building worlds with technology. Shaping experiences with systems.</h2>
+        </div>
+        <div class="about-grid">
+          <p data-i18n-html="about.first">
+            I am <strong>Dayang Sun</strong>, a game developer with a focus on
+            gameplay programming, computer graphics, and engine-level systems.
+            My work explores how technical decisions shape responsive gameplay,
+            visual quality, and real-time performance.
+          </p>
+          <p data-i18n="about.second">
+            This portfolio presents selected university and independent work.
+            Each project highlights my technical contribution, from C++
+            algorithms and rendering pipelines to Unreal Engine.
+          </p>
+        </div>
+      </section>
+
+      <section class="projects section-shell section-block" id="projects">
+        <div class="section-heading heading-row">
+          <div>
+            <p class="section-index" data-i18n="projects.index">02 / SELECTED WORK</p>
+            <h2 data-i18n="projects.title">Featured Projects</h2>
+          </div>
+          <p class="section-aside" data-i18n="projects.aside">
+            Six projects spanning gameplay, graphics, rendering, systems, and
+            technical art.
+          </p>
+        </div>
+        <div class="project-grid" id="project-grid"></div>
+      </section>
+
+      <section class="skills section-shell section-block" id="skills">
+        <div class="section-heading heading-row">
+          <div>
+            <p class="section-index" data-i18n="skills.index">03 / TOOLKIT</p>
+            <h2 data-i18n="skills.title">Technical Skills</h2>
+          </div>
+          <p class="section-aside" data-i18n="skills.aside">
+            A practical toolkit developed through real-time projects.
+          </p>
+        </div>
+        <div class="skills-grid" id="skills-grid"></div>
+      </section>
+
+      <section class="contact section-shell section-block" id="contact">
+        <div class="contact-panel">
+          <div>
+            <p class="section-index" data-i18n="contact.index">04 / CONTACT</p>
+            <h2 data-i18n="contact.title">Let us build something worth playing.</h2>
+            <p data-i18n="contact.description">
+              I am currently preparing this portfolio for university review and
+              game development opportunities.
+            </p>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:sday1001@outlook.com">sday1001@outlook.com</a>
+            <a href="mailto:2421001627@qq.com">2421001627@qq.com</a>
+            <a href="https://github.com/sdaday" target="_blank" rel="noreferrer">GitHub / sdaday</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell">
+      <span data-i18n="footer.name">Dayang Sun / Game Development Portfolio</span>
+      <span data-i18n="footer.offline">Designed for direct offline viewing</span>
+    </footer>
+
+    <div class="modal-backdrop" id="project-modal" aria-hidden="true">
+      <section
+        class="project-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <button class="modal-close" id="modal-close" type="button" aria-label="Close project details">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-content" id="modal-content"></div>
+      </section>
+    </div>
+  </body>
+</html>
