@@ -77,20 +77,19 @@ window.PORTFOLIO_PROJECTS = [
       "Tested performance in finite and infinite map modes, with stable real-time FPS."
     ],
     highlights: [
+      "2D pixel game",
       "Virtual camera",
-      "Infinite tile maps",
+      "Infinite maps",
       "Enemy AI",
       "Projectile combat",
-      "AOE attack",
       "Save/load system"
     ],
     technologies: [
       "C++",
       "GamesEngineeringBase",
-      "Object Oriented Programming",
-      "File I/O",
+      "OOP",
       "Data Structures",
-      "Algorithms",
+      "File I/O",
       "Visual Studio"
     ],
     images: [
@@ -128,26 +127,23 @@ window.PORTFOLIO_PROJECTS = [
       "Evaluated real-time performance using frame time and FPS, maintaining around 239 to 240 FPS during testing."
     ],
     highlights: [
-      "DirectX 12 pipeline",
+      "Real-time rendering",
       "Normal mapping",
       "GPU instancing",
-      "FPS camera",
+      "First person camera",
       "AABB collision"
     ],
     technologies: [
       "C++",
       "DirectX 12",
       "HLSL",
-      "Win32",
-      "GPU Resources",
-      "Descriptor Heaps",
-      "Custom Rendering Pipeline",
-      "Visual Studio"
+      "Descriptor Heap",
+      "Rendering Pipeline"
     ],
     images: [
       {
         src: "assets/images/projects/DirectX 12 Computer Graphics Project.png",
-        label: "DirectX 12 first person scene with textured and instanced environment objects"
+        label: "DirectX 12 first person scene"
       }
     ],
     links: [
@@ -185,22 +181,18 @@ window.PORTFOLIO_PROJECTS = [
     highlights: [
       "Path tracing",
       "BVH acceleration",
-      "Multithreading",
+      "Multithreaded rendering",
       "Environment lighting",
-      "Denoising",
+      "Image denoising",
       "Instant Radiosity"
     ],
     technologies: [
       "C++",
       "Path Tracing",
-      "Physically Based Rendering",
       "BVH",
       "Multithreading",
-      "Environment Maps",
-      "Intel Open Image Denoise",
-      "BSDF Materials",
-      "Instant Radiosity",
-      "Visual Studio"
+      "Open Image Denoise",
+      "BSDF Materials"
     ],
     images: [
       {
@@ -263,36 +255,36 @@ window.PORTFOLIO_PROJECTS = [
     ],
     highlights: [
       "CPU rasterizer",
+      "Performance optimisation",
+      "Multithreaded rendering",
       "Thread pool",
-      "Triangle binning",
-      "WinSock TCP",
-      "Public chat",
-      "Private DM"
+      "TCP chat room",
+      "Private messaging"
     ],
     technologies: [
       "C++",
       "CPU Rasterizer",
       "Multithreading",
       "Thread Pool",
-      "Atomic Counter",
-      "WinSock",
-      "TCP Networking",
-      "Dear ImGui",
-      "Visual Studio",
-      "Git / GitHub"
+      "WinSock TCP",
+      "Dear ImGui"
     ],
     images: [
       {
-        src: "assets/images/projects/Games Engineering Multithreading version.png",
-        label: "Multithreaded rasterizer performance test"
+        src: "assets/images/projects/预览.png",
+        label: "Rasterizer preview scene"
+      },
+      {
+        src: "assets/images/projects/Games Engineering Original version.png",
+        label: "Original rasterizer performance test"
       },
       {
         src: "assets/images/projects/Games Engineering Optimization version.png",
         label: "Single threaded optimised rasterizer performance test"
       },
       {
-        src: "assets/images/projects/Games Engineering Original version.png",
-        label: "Original rasterizer baseline performance test"
+        src: "assets/images/projects/Games Engineering Multithreading version.png",
+        label: "Multithreaded rasterizer performance test"
       },
       {
         src: "assets/images/projects/Games Engineering Chatroom.png",
@@ -313,7 +305,7 @@ window.PORTFOLIO_PROJECTS = [
     type: "Unreal Engine 5 / Environment Systems / Technical Art / Group Project",
     discipline: "Technical Art",
     summary:
-      "An Unreal Engine 5 environment systems project where I contributed dynamic sky and weather logic, cloud setup, rain control, water shading, fog placement, and lighting adjustments.",
+      "An Unreal Engine 5 group game project where I contributed dynamic sky and weather logic, cloud setup, rain control, water shading, fog placement, and lighting adjustments.",
     description:
       "A game engine design and development project built in Unreal Engine 5. My personal contribution focused on dynamic sky, water, and fog systems. This entry presents the project as Unreal Engine technical art and environment systems work.",
     contributions: [
@@ -331,21 +323,18 @@ window.PORTFOLIO_PROJECTS = [
       "Implemented and debugged systems through Blueprints."
     ],
     highlights: [
-      "Dynamic weather",
+      "Dynamic sky",
+      "Weather switching",
       "Cloud systems",
-      "Rain control",
-      "Water material",
-      "Fog",
-      "Lighting"
+      "Rain effect control",
+      "Water shading",
+      "Fog atmosphere"
     ],
     technologies: [
       "Unreal Engine 5",
       "Blueprints",
-      "Materials",
       "Niagara",
-      "Post Process",
-      "Lighting System",
-      "Git / GitHub"
+      "Lighting System"
     ],
     images: [
       {
@@ -366,7 +355,7 @@ window.PORTFOLIO_PROJECTS = [
       },
       {
         src: "assets/images/projects/GEDD_Ocean BluePrints.png",
-        label: "Ocean Blueprint"
+        label: "Ocean material graph"
       },
       {
         src: "assets/images/projects/GEDD_VolumetrocClouds BluePrints1.png",

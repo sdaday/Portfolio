@@ -8,13 +8,12 @@ window.PORTFOLIO_TRANSLATIONS = {
       "nav.skills": "Skills",
       "nav.contact": "Contact",
       "hero.eyebrow": "Game Developer <span>/</span> Game Designer",
-      "hero.title": "From design to code. <span>From concept to implementation.</span>",
+      "hero.title": "From design to code.<br /><span>From concept to implementation.</span>",
       "hero.description": "A technical portfolio focused on game programming, game design, computer graphics, engine systems, and performance optimisation.",
       "hero.featured": "Featured projects",
-      "hero.disciplines": "Core disciplines",
       "hero.language": "Primary language",
       "about.index": "01 / ABOUT",
-      "about.title": "Building worlds with technology. Shaping experiences with systems.",
+      "about.title": "Building worlds with technology.<br />Shaping experiences with systems.",
       "about.first": "I am <strong>Dayang Sun</strong>, a game developer with a focus on gameplay programming, computer graphics, and engine-level systems. My work explores how technical decisions shape responsive gameplay, visual quality, and real-time performance.",
       "about.second": "This portfolio presents selected university and independent work. Each project highlights the technologies I applied, from C++ algorithms and rendering pipelines to Unreal Engine.",
       "projects.index": "02 / SELECTED WORK",
@@ -22,12 +21,10 @@ window.PORTFOLIO_TRANSLATIONS = {
       "projects.aside": "Six projects spanning gameplay, graphics, rendering, systems, and technical art.",
       "skills.index": "03 / TOOLKIT",
       "skills.title": "Technical Skills",
-      "skills.aside": "A practical toolkit developed through real-time projects.",
+      "skills.aside": "These skills come from practical implementation in coursework projects.",
       "contact.index": "04 / CONTACT",
       "contact.title": "Let us build something worth playing.",
       "contact.description": "I am currently preparing this portfolio for university review and game development opportunities.",
-      "footer.name": "Dayang Sun / Game Development Portfolio",
-      "footer.offline": "Designed for direct offline viewing",
       "modal.close": "Close project details",
       "card.contribution": "My Technical Contribution",
       "card.appliedTechnologies": "Applied Technologies",
@@ -55,26 +52,23 @@ window.PORTFOLIO_TRANSLATIONS = {
       "nav.skills": "技能",
       "nav.contact": "联系",
       "hero.eyebrow": "游戏开发者 <span>/</span> 游戏设计师",
-      "hero.title": "从设计到代码，<span>从构想到实现。</span>",
+      "hero.title": "从设计到代码，<br /><span>从构想到实现。</span>",
       "hero.description": "专注于游戏编程、游戏设计、计算机图形学、引擎系统和性能优化的技术作品集。",
       "hero.featured": "精选项目",
-      "hero.disciplines": "核心领域",
       "hero.language": "主要语言",
       "about.index": "01 / 关于我",
-      "about.title": "用技术构建世界，用系统塑造体验。",
+      "about.title": "用技术构建世界，<br />用系统塑造体验。",
       "about.first": "我是<strong>孙达扬</strong>，一名专注于游戏玩法编程、计算机图形学和引擎系统的游戏开发者。我的项目探索技术决策如何影响操作反馈、视觉质量和实时性能。",
       "about.second": "本作品集展示了我在大学课程和个人项目中的精选工作。每个项目都重点介绍我应用的技术，涵盖 C++ 算法、渲染管线和 Unreal Engine。",
       "projects.index": "02 / 精选作品",
       "projects.title": "项目展示",
-      "projects.aside": "六个项目，涵盖游戏玩法、图形渲染、系统开发和技术美术。",
+      "projects.aside": "六个项目，涵盖玩法、图形、系统开发与技术美术。",
       "skills.index": "03 / 技术栈",
       "skills.title": "技术技能",
-      "skills.aside": "通过实时项目实践建立的开发工具箱。",
+      "skills.aside": "这些技能来自课程项目中的实际实现。",
       "contact.index": "04 / 联系方式",
       "contact.title": "一起打造值得体验的游戏。",
       "contact.description": "我正在为大学评审和游戏开发相关机会整理这份作品集。",
-      "footer.name": "孙达扬 / 游戏开发作品集",
-      "footer.offline": "支持直接离线打开",
       "modal.close": "关闭项目详情",
       "card.contribution": "我的技术贡献",
       "card.appliedTechnologies": "应用技术",
@@ -153,7 +147,8 @@ window.PORTFOLIO_TRANSLATIONS = {
           "实现二进制存档，保存角色、敌人、道具、地图类型、分数、时间和游戏结束状态。",
           "测试有限与无限地图模式下的性能，保持稳定实时帧率。"
         ],
-        highlights: ["虚拟摄像机", "无限图块地图", "敌人 AI", "投射物战斗", "AOE 攻击", "存档系统"],
+        highlights: ["2D 像素游戏", "虚拟摄像机", "无限地图", "敌人 AI", "投射物战斗", "存档系统"],
+        technologies: ["C++", "GamesEngineeringBase", "OOP", "Data Structures", "File I/O", "Visual Studio"],
         images: ["2D 像素游戏：图块地图、敌人、投射物、分数与 FPS 显示"]
       },
       "directx12-graphics": {
@@ -176,8 +171,9 @@ window.PORTFOLIO_TRANSLATIONS = {
           "加入天空穹顶作为背景。",
           "通过帧时间和 FPS 评估实时性能，测试中保持约 239 至 240 FPS。"
         ],
-        highlights: ["DirectX 12 管线", "法线映射", "GPU 实例化", "第一人称摄像机", "AABB 碰撞"],
-        images: ["DirectX 12 第一人称场景：纹理与实例化环境物体"]
+        highlights: ["实时渲染", "法线映射", "GPU 实例化", "第一人称相机", "AABB 碰撞"],
+        technologies: ["C++", "DirectX 12", "HLSL", "Descriptor Heap", "Rendering Pipeline"],
+        images: ["DirectX 12 第一人称场景"]
       },
       "advanced-graphics": {
         title: "高级计算机图形学",
@@ -203,7 +199,9 @@ window.PORTFOLIO_TRANSLATIONS = {
           "在相同渲染时间下比较标准路径追踪与 Instant Radiosity。",
           "分析采样限制、VPL 伪影、正则化和后续改进方向。"
         ],
-        highlights: ["路径追踪", "BVH 加速", "多线程", "环境光照", "降噪", "Instant Radiosity"]
+        highlights: ["路径追踪", "BVH 加速", "多线程渲染", "环境光照", "图像降噪", "Instant Radiosity"],
+        technologies: ["C++", "Path Tracing", "BVH", "Multithreading", "Open Image Denoise", "BSDF Materials"],
+        images: ["路径追踪", "光线追踪"]
       },
       "games-engineering": {
         title: "游戏工程",
@@ -246,13 +244,21 @@ window.PORTFOLIO_TRANSLATIONS = {
             ]
           }
         ],
-        highlights: ["CPU 光栅化器", "线程池", "三角形分箱", "WinSock TCP", "公共聊天", "私信"]
+        highlights: ["CPU 光栅化器", "性能优化", "多线程渲染", "线程池", "TCP 聊天室", "私信系统"],
+        technologies: ["C++", "CPU Rasterizer", "Multithreading", "Thread Pool", "WinSock TCP", "Dear ImGui"],
+        images: [
+          "光栅化器预览场景",
+          "原始光栅化器性能测试",
+          "单线程优化版光栅化器性能测试",
+          "多线程光栅化器性能测试",
+          "Dear ImGui 在线聊天室：公共消息与私信"
+        ]
       },
       "ue5-environment-systems": {
         title: "游戏引擎设计与开发",
         type: "Unreal Engine 5 / 环境系统 / 技术美术 / 小组项目",
         discipline: "技术美术",
-        summary: "Unreal Engine 5 环境系统项目。我的贡献包括动态天空与天气逻辑、云层设置、降雨控制、水体着色、雾效布置和光照调整。",
+        summary: "Unreal Engine 5 小组游戏项目。我的贡献包括动态天空与天气逻辑、云层设置、降雨控制、水体着色、雾效布置和光照调整。",
         description: "这是一个使用 Unreal Engine 5 开发的游戏引擎设计与开发项目。我的个人贡献集中在动态天空、水体和雾效系统。本项目重点展示 Unreal Engine 技术美术和环境系统相关工作。",
         contributions: [
           "实现动态天空系统。",
@@ -268,17 +274,18 @@ window.PORTFOLIO_TRANSLATIONS = {
           "调整光照和后期处理。",
           "使用 Blueprints 实现并调试系统。"
         ],
-        highlights: ["动态天气", "云层系统", "降雨控制", "水体材质", "雾效", "光照"],
+        highlights: ["动态天空", "天气切换", "云层系统", "雨效控制", "水体着色", "雾效氛围"],
+        technologies: ["Unreal Engine 5", "Blueprints", "Niagara", "Lighting System"],
         images: [
           "游戏中的雨天状态",
           "游戏中的水体材质效果",
           "体积云效果与材质参数",
           "游戏中的体积雾效果",
-          "Ocean Blueprint",
-          "Volumetric Clouds material graph 1",
-          "Volumetric Clouds material graph 2",
-          "Rain Blueprint",
-          "Volumetric fog material graph"
+          "海洋材质图",
+          "体积云材质图 1",
+          "体积云材质图 2",
+          "降雨蓝图",
+          "体积雾材质图"
         ]
       }
     }
