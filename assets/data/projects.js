@@ -5,45 +5,76 @@ window.PORTFOLIO_PROJECTS = [
     number: "01",
     title: "UE5 Individual Game Project",
     type: "Unreal Engine 5 / Third Person Action Game / Individual Project",
-    discipline: "Gameplay Systems",
+    discipline: "Complete Game Flow",
     summary:
-      "A third person action game developed as a complete playable experience or vertical slice, with a clear gameplay flow, progression, UI, audio, and a completion condition.",
+      "Broken Throne is a third person action game about an exiled prince exploring a dark dungeon, gathering resources, and fighting toward a final boss encounter.",
     description:
-      "A third person action game developed in Unreal Engine 5 for the Individual Game Project coursework. The project is intended to be presented as a complete playable game or a vertical slice, with a clear gameplay flow, UI, audio, progression, and completion condition. This entry remains intentionally general while the final gameplay scope is being refined.",
+      "Broken Throne is an individual third person action game project developed in Unreal Engine 5. The player takes the role of an exiled prince exploring a dark dungeon, fighting enemies, collecting resources, and eventually challenging the boss. The project implements a complete game flow, including a main menu, story introduction, playable level, pause menu, death screen, boss fight, and completion screen. The core gameplay is built around melee attack combos, stamina management, blocking, dodging, enemy lock-on, healing potions, and chest interactions.",
     contributions: [
-      "Third person character controller placeholder.",
-      "Gameplay interaction system placeholder.",
-      "Combat system placeholder.",
-      "Enemy and boss encounter placeholder.",
-      "UI and audio integration.",
-      "Level design and progression.",
-      "Technical feature linked to the critical literature review placeholder."
+      "Used Unreal Engine 5 and Blueprints to build a complete third person action game flow.",
+      "Implemented player movement, camera control, melee attacks, dodge, block, enemy lock-on, and interaction systems.",
+      "Built a stamina based combat system where attacking, defending, dodging, and skills create resource trade-offs.",
+      "Created a three-hit normal attack combo and heavy attack logic, using animation notifies for damage detection.",
+      "Implemented healing potion usage and chest interaction systems.",
+      "Used Behavior Tree to build normal enemy AI with patrol, player detection, chase, and attack states.",
+      "Added random cooldown timing to enemy attacks to make combat rhythm feel more natural.",
+      "Designed a multi-phase boss fight with normal combos, knockback, thrust attacks, area attacks, and dash skills.",
+      "Used Timeline, Lerp Vector, and SetActorLocation to implement stable boss dash movement.",
+      "Built UI and audio feedback systems for health, stamina, potion count, enemy health bars, tutorials, and menus.",
+      "Added save/load support in the start menu and pause menu, and allowed loading the latest save after death."
     ],
     highlights: [
-      "Playable individual game project",
-      "Complete game or vertical slice",
-      "Clear gameplay flow",
-      "UI and sound integration",
-      "Tutorial support if needed",
-      "Completion or win condition",
-      "Literature review technical feature"
+      "Third person combat",
+      "Behavior Tree enemy AI",
+      "Multi-phase boss fight",
+      "UI",
+      "Audio",
+      "Save and load",
+      "Level exploration"
     ],
     technologies: [
       "Unreal Engine 5",
       "Blueprints",
+      "Behavior Tree",
       "Gameplay Systems",
-      "UI",
-      "Audio",
-      "Level Design"
+      "UI Widgets",
+      "Animation Montage",
+      "Level Design",
+      "Audio"
     ],
     images: [
-      { src: "", label: "Gameplay screenshot placeholder" },
-      { src: "", label: "Level or encounter screenshot placeholder" },
-      { src: "", label: "UI screenshot placeholder" }
+      {
+        src: "assets/images/projects/Individual game.png",
+        label: "Game preview"
+      },
+      {
+        src: "assets/images/projects/Individualgame Boss Fight.png",
+        label: "Individual game boss fight"
+      },
+      {
+        src: "assets/images/projects/Individualgame Player Attack Combo.png",
+        label: "Individual game player attack combo"
+      },
+      {
+        src: "assets/images/projects/Individualgame Boss Attack Combo.png",
+        label: "Individual game boss attack combo"
+      },
+      {
+        src: "assets/images/projects/Individual game Player Skill and Dodge.png",
+        label: "Player skill and dodge"
+      },
+      {
+        src: "assets/images/projects/Individualgame Enemy Behaviour Tree.png",
+        label: "Enemy behaviour tree"
+      },
+      {
+        src: "assets/images/projects/Individualgame Start Menu Button.png",
+        label: "Start menu"
+      }
     ],
     links: [
-      { label: "GitHub Source", href: "", placeholder: "GitHub link placeholder" },
-      { label: "Playable Build", href: "", placeholder: "Playable executable placeholder" }
+      { label: "GitHub Source", href: "https://github.com/sdaday/WM9M6Game", placeholder: "" },
+      { label: "Gameplay Video", video: "assets/videos/projects/broken-throne-gameplay.mp4", placeholder: "" }
     ]
   },
   {
@@ -301,14 +332,16 @@ window.PORTFOLIO_PROJECTS = [
   {
     id: "ue5-environment-systems",
     number: "06",
-    title: "Game Engine Design and Development",
-    type: "Unreal Engine 5 / Environment Systems / Technical Art / Group Project",
-    discipline: "Technical Art",
+    title: "UE5 Group Game Project",
+    type: "Unreal Engine 5 / Design and Art / Group Project",
+    discipline: "Design and Art",
     summary:
-      "An Unreal Engine 5 group game project where I contributed dynamic sky and weather logic, cloud setup, rain control, water shading, fog placement, and lighting adjustments.",
+      "An Unreal Engine 5 group game project where I contributed gameplay design, dynamic sky and weather logic, cloud setup, rain control, water shading, fog placement, and lighting adjustments.",
     description:
-      "A game engine design and development project built in Unreal Engine 5. My personal contribution focused on dynamic sky, water, and fog systems. This entry presents the project as Unreal Engine technical art and environment systems work.",
+      "A game engine design and development project built in Unreal Engine 5. My personal contribution focused on gameplay design, dynamic sky, water, and fog systems. This entry presents the project as Unreal Engine design, art, and environment systems work.",
     contributions: [
+      "Designed the core gameplay.",
+      "Designed the game flow.",
       "Implemented a dynamic sky system.",
       "Built weather switching logic.",
       "Created sunny and rainy weather states.",

@@ -966,6 +966,63 @@ html[lang="zh-CN"] .projects-aside {
   transform: rotate(90deg);
 }
 
+.video-backdrop {
+  display: none;
+  position: fixed;
+  z-index: 140;
+  inset: 0;
+  place-items: center;
+  padding: 28px;
+  background: rgba(0, 4, 5, 0.78);
+  backdrop-filter: blur(10px);
+}
+
+.video-backdrop.is-open {
+  display: grid;
+}
+
+.video-modal {
+  position: relative;
+  width: min(980px, 100%);
+  overflow: hidden;
+  border: 1px solid var(--line-bright);
+  border-radius: var(--radius);
+  background: #071113;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.62);
+}
+
+.video-modal video {
+  display: block;
+  width: 100%;
+  max-height: min(72vh, 620px);
+  background: #020606;
+}
+
+.video-close {
+  display: grid;
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  right: 14px;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border: 1px solid var(--line-bright);
+  border-radius: 50%;
+  color: var(--accent-bright);
+  background: rgba(3, 16, 17, 0.82);
+  cursor: pointer;
+  font-size: 1.65rem;
+  line-height: 1;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.video-close:hover,
+.video-close:focus-visible {
+  background: rgba(135, 224, 196, 0.16);
+  transform: rotate(90deg);
+}
+
 .modal-hero {
   position: relative;
   overflow: hidden;

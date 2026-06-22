@@ -1,7 +1,27 @@
 (function () {
   "use strict";
 
-  var projects = window.PORTFOLIO_PROJECTS || [];
+  var projectOrder = [
+    "ue5-individual-game",
+    "ue5-environment-systems",
+    "directx12-graphics",
+    "advanced-graphics",
+    "games-engineering",
+    "programming-algorithms"
+  ];
+  var orderIndex = projectOrder.reduce(function (index, projectId, position) {
+    index[projectId] = position;
+    return index;
+  }, {});
+  var projects = (window.PORTFOLIO_PROJECTS || []).slice().sort(function (a, b) {
+    var aIndex = orderIndex[a.id];
+    var bIndex = orderIndex[b.id];
+    return (aIndex === undefined ? 999 : aIndex) - (bIndex === undefined ? 999 : bIndex);
+  });
+  projects.forEach(function (project, index) {
+    var number = index + 1;
+    project.number = number < 10 ? "0" + number : String(number);
+  });
   var skills = window.PORTFOLIO_SKILLS || [];
   var translations = window.PORTFOLIO_TRANSLATIONS || {};
   var projectGrid = document.getElementById("project-grid");
@@ -9,8 +29,12 @@
   var modal = document.getElementById("project-modal");
   var modalContent = document.getElementById("modal-content");
   var modalClose = document.getElementById("modal-close");
+  var videoModal = document.getElementById("video-modal");
+  var videoClose = document.getElementById("video-close");
+  var gameplayVideo = document.getElementById("gameplay-video");
   var languageOptions = document.querySelectorAll("[data-language]");
   var activeTrigger = null;
+  var activeVideoTrigger = null;
   var currentLanguage = "en";
 
   function translate(key) {
@@ -56,14 +80,6 @@
       usesTechnicalContributionLabel(project)
         ? "card.contribution"
         : "card.appliedTechnologies"
-    );
-  }
-
-  function getModalContributionLabel(project) {
-    return translate(
-      usesTechnicalContributionLabel(project)
-        ? "modal.contribution"
-        : "modal.appliedTechnologies"
     );
   }
 
@@ -207,6 +223,16 @@
   function renderLinks(links) {
     return links
       .map(function (link) {
+        if (link.video) {
+          return (
+            '<button class="resource-link" type="button" data-video-src="' +
+            escapeHtml(link.video) +
+            '">' +
+            escapeHtml(link.label) +
+            '<span aria-hidden="true">&#9658;</span></button>'
+          );
+        }
+
         if (link.href) {
           return (
             '<a class="resource-link" href="' +
@@ -307,17 +333,13 @@
       "</div>" +
       '<div class="modal-grid">' +
       '<div class="modal-main">' +
-      '<section class="modal-section"><p class="section-kicker">' +
-      escapeHtml(getModalContributionLabel(project)) +
-      "</p><h3>" +
+      '<section class="modal-section"><h3>' +
       escapeHtml(getModalContributionTitle(project)) +
       "</h3>" +
       renderContributionGroups(project) +
       "</section>" +
-      '<section class="modal-section"><p class="section-kicker">' +
+      '<section class="modal-section"><h3>' +
       escapeHtml(translate("modal.gallery")) +
-      "</p><h3>" +
-      escapeHtml(translate("modal.screenshots")) +
       "</h3>" +
       renderGalleryNote(project.images) +
       '<div class="gallery-grid gallery-count-' +
@@ -359,6 +381,48 @@
     }
   }
 
+  function openGameplayVideo(videoSrc, trigger) {
+    if (!videoSrc) {
+      return;
+    }
+
+    activeVideoTrigger = trigger;
+    gameplayVideo.setAttribute("src", videoSrc);
+    gameplayVideo.load();
+    videoModal.classList.add("is-open");
+    videoModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+    videoClose.focus();
+
+    var playPromise = gameplayVideo.play();
+    if (playPromise && typeof playPromise.catch === "function") {
+      playPromise.catch(function () {
+        // Some browsers block autoplay even after a click; controls remain available.
+      });
+    }
+  }
+
+  function closeGameplayVideo() {
+    videoModal.classList.remove("is-open");
+    videoModal.setAttribute("aria-hidden", "true");
+    gameplayVideo.pause();
+    try {
+      gameplayVideo.currentTime = 0;
+    } catch (error) {
+      // Reset can fail before metadata loads on some file:// browsers.
+    }
+    gameplayVideo.removeAttribute("src");
+    gameplayVideo.load();
+
+    if (!modal.classList.contains("is-open")) {
+      document.body.classList.remove("modal-open");
+    }
+
+    if (activeVideoTrigger) {
+      activeVideoTrigger.focus();
+    }
+  }
+
   projectGrid.addEventListener("click", function (event) {
     var trigger = event.target.closest("[data-project-id]");
     if (trigger) {
@@ -374,7 +438,27 @@
     }
   });
 
+  modalContent.addEventListener("click", function (event) {
+    var trigger = event.target.closest("[data-video-src]");
+    if (trigger) {
+      openGameplayVideo(trigger.getAttribute("data-video-src"), trigger);
+    }
+  });
+
+  videoClose.addEventListener("click", closeGameplayVideo);
+
+  videoModal.addEventListener("click", function (event) {
+    if (event.target === videoModal) {
+      closeGameplayVideo();
+    }
+  });
+
   document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && videoModal.classList.contains("is-open")) {
+      closeGameplayVideo();
+      return;
+    }
+
     if (event.key === "Escape" && modal.classList.contains("is-open")) {
       closeModal();
     }
@@ -393,6 +477,10 @@
 
     if (modal.classList.contains("is-open")) {
       closeModal();
+    }
+
+    if (videoModal.classList.contains("is-open")) {
+      closeGameplayVideo();
     }
 
     currentLanguage = language;
