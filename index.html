@@ -9,9 +9,12 @@
     />
     <title>Dayang Sun | Game Development Portfolio</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/skyfire-reader.css" />
     <script src="assets/data/projects.js" defer></script>
-    <script src="assets/data/skills.js" defer></script>
     <script src="assets/data/translations.js" defer></script>
+    <script src="assets/data/skyfire-document.js" defer></script>
+    <script src="assets/data/broken-throne-document.js" defer></script>
+    <script src="assets/js/skyfire-reader.js" defer></script>
     <script src="assets/js/app.js" defer></script>
   </head>
   <body>
@@ -26,7 +29,6 @@
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#about" data-i18n="nav.about">About</a>
         <a href="#projects" data-i18n="nav.projects">Projects</a>
-        <a href="#skills" data-i18n="nav.skills">Skills</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
       <div class="header-actions">
@@ -126,20 +128,9 @@
       <section class="about section-shell section-block" id="about">
         <div class="section-heading">
           <p class="section-index" data-i18n="about.index">01 / ABOUT</p>
-          <h2 data-i18n-html="about.title">Building worlds with technology.<br />Shaping experiences with systems.</h2>
         </div>
-        <div class="about-grid">
-          <p data-i18n-html="about.first">
-            I am <strong>Dayang Sun</strong>, a game developer with a focus on
-            gameplay programming, computer graphics, and engine-level systems.
-            My work explores how technical decisions shape responsive gameplay,
-            visual quality, and real-time performance.
-          </p>
-          <p data-i18n="about.second">
-            This portfolio presents selected university and independent work.
-            Each project highlights my technical contribution, from C++
-            algorithms and rendering pipelines to Unreal Engine.
-          </p>
+        <div class="about-copy">
+          <p data-i18n="about.first">我是孙达扬，专注于游戏玩法、战斗与系统设计，同时具备技术实现能力。在设计玩法机制时，我不仅关注玩家的操作体验与系统之间的联系，也会结合技术可行性、实现成本和实际测试结果，不断完善设计方案。</p>
         </div>
       </section>
 
@@ -157,27 +148,14 @@
         <div class="project-grid" id="project-grid"></div>
       </section>
 
-      <section class="skills section-shell section-block" id="skills">
-        <div class="section-heading heading-row">
-          <div>
-            <p class="section-index" data-i18n="skills.index">03 / TOOLKIT</p>
-            <h2 data-i18n="skills.title">Technical Skills</h2>
-          </div>
-          <p class="section-aside" data-i18n="skills.aside">
-            These skills come from practical implementation in coursework projects.
-          </p>
-        </div>
-        <div class="skills-grid" id="skills-grid"></div>
-      </section>
-
       <section class="contact section-shell section-block" id="contact">
         <div class="contact-panel">
           <div>
-            <p class="section-index" data-i18n="contact.index">04 / CONTACT</p>
+            <p class="section-index" data-i18n="contact.index">03 / CONTACT</p>
             <h2 data-i18n="contact.title">Let us build something worth playing.</h2>
             <p data-i18n="contact.description">
               I am currently preparing this portfolio for university review and
-              game development opportunities.
+              game design opportunities.
             </p>
           </div>
           <div class="contact-links">

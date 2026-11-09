@@ -3,11 +3,11 @@ window.PORTFOLIO_PROJECTS = [
   {
     id: "ue5-individual-game",
     number: "01",
-    title: "UE5 Individual Game Project",
-    type: "Unreal Engine 5 / Third Person Action Game / Individual Project",
+    title: "Broken Throne",
+    type: "Unreal Engine 5 / Individual Project",
     discipline: "Complete Game Flow",
     summary:
-      "Broken Throne is a third person action game about an exiled prince exploring a dark dungeon, gathering resources, and fighting toward a final boss encounter.",
+      "Broken Throne is a third person action game independently designed and developed by me. Using a Soulslike and ARPG-style combat system, players explore a dungeon, defeat enemies, and overcome the final boss to complete the prologue level.",
     description:
       "Broken Throne is an individual third person action game project developed in Unreal Engine 5. The player takes the role of an exiled prince exploring a dark dungeon, fighting enemies, collecting resources, and eventually challenging the boss. The project implements a complete game flow, including a main menu, story introduction, playable level, pause menu, death screen, boss fight, and completion screen. The core gameplay is built around melee attack combos, stamina management, blocking, dodging, enemy lock-on, healing potions, and chest interactions.",
     contributions: [
@@ -24,13 +24,10 @@ window.PORTFOLIO_PROJECTS = [
       "Added save/load support in the start menu and pause menu, and allowed loading the latest save after death."
     ],
     highlights: [
-      "Third person combat",
-      "Behavior Tree enemy AI",
+      "Melee combos and stamina",
+      "Normal enemy AI",
       "Multi-phase boss fight",
-      "UI",
-      "Audio",
-      "Save and load",
-      "Level exploration"
+      "Level and interaction systems"
     ],
     technologies: [
       "Unreal Engine 5",
@@ -332,79 +329,28 @@ window.PORTFOLIO_PROJECTS = [
   {
     id: "ue5-environment-systems",
     number: "06",
-    title: "UE5 Group Game Project",
-    type: "Unreal Engine 5 / Design and Art / Group Project",
-    discipline: "Design and Art",
+    title: "Skyfire Uprising | Level 3 Naval Combat",
+    type: "Unreal Engine 5 / Team Game / Level 3",
+    discipline: "Gameplay Design / Technical Art",
     summary:
-      "An Unreal Engine 5 group game project where I contributed gameplay design, dynamic sky and weather logic, cloud setup, rain control, water shading, fog placement, and lighting adjustments.",
-    description:
-      "A game engine design and development project built in Unreal Engine 5. My personal contribution focused on gameplay design, dynamic sky, water, and fog systems. This entry presents the project as Unreal Engine design, art, and environment systems work.",
-    contributions: [
-      "Designed the core gameplay.",
-      "Designed the game flow.",
-      "Implemented a dynamic sky system.",
-      "Built weather switching logic.",
-      "Created sunny and rainy weather states.",
-      "Configured a 2D cloud setup.",
-      "Configured a volumetric cloud setup.",
-      "Added rain effect activation and control.",
-      "Developed water shading.",
-      "Implemented ripple normal blending.",
-      "Worked on transparency and foam related material behaviour.",
-      "Placed fog and shaped the atmosphere design.",
-      "Adjusted lighting and post process settings.",
-      "Implemented and debugged systems through Blueprints."
-    ],
+      "A six-person team's naval level for the class-wide, seven-level Skyfire Uprising game. My work covered combat and environment design, the sky system, and ocean materials; teammates implemented the ship and enemy gameplay logic.",
+    document: "skyfire",
     highlights: [
-      "Dynamic sky",
-      "Weather switching",
-      "Cloud systems",
-      "Rain effect control",
-      "Water shading",
-      "Fog atmosphere"
+      "Combat design",
+      "Weather and fog design",
+      "Sky system",
+      "Ocean materials"
     ],
     technologies: [
       "Unreal Engine 5",
-      "Blueprints",
+      "Blueprint",
       "Niagara",
-      "Lighting System"
+      "Material"
     ],
     images: [
       {
-        src: "assets/images/projects/GEDD_Rain Result.png",
-        label: "Rain weather state during gameplay"
-      },
-      {
-        src: "assets/images/projects/GEDD_Ocean Result.png",
-        label: "Ocean material result during gameplay"
-      },
-      {
-        src: "assets/images/projects/GEDD_VolumetricClouds Result.png",
-        label: "Volumetric cloud result and material parameters"
-      },
-      {
-        src: "assets/images/projects/GEDD_VolumetricFog Result.png",
-        label: "Volumetric fog result during gameplay"
-      },
-      {
-        src: "assets/images/projects/GEDD_Ocean BluePrints.png",
-        label: "Ocean material graph"
-      },
-      {
-        src: "assets/images/projects/GEDD_VolumetrocClouds BluePrints1.png",
-        label: "Volumetric Clouds material graph 1"
-      },
-      {
-        src: "assets/images/projects/GEDD_VolumetricClouds BluePringts.png",
-        label: "Volumetric Clouds material graph 2"
-      },
-      {
-        src: "assets/images/projects/GEDD_Rain BluePrints.png",
-        label: "Rain Blueprint"
-      },
-      {
-        src: "assets/images/projects/GEDD_VolumeticFog BluePrints.png",
-        label: "Volumetric fog material graph"
+        src: "assets/images/skyfire/gameplay-21.png",
+        label: "Skyfire Uprising level 3 naval combat"
       }
     ],
     links: [

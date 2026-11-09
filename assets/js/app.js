@@ -22,10 +22,8 @@
     var number = index + 1;
     project.number = number < 10 ? "0" + number : String(number);
   });
-  var skills = window.PORTFOLIO_SKILLS || [];
   var translations = window.PORTFOLIO_TRANSLATIONS || {};
   var projectGrid = document.getElementById("project-grid");
-  var skillsGrid = document.getElementById("skills-grid");
   var modal = document.getElementById("project-modal");
   var modalContent = document.getElementById("modal-content");
   var modalClose = document.getElementById("modal-close");
@@ -65,17 +63,12 @@
     return localized;
   }
 
-  function localizeSkill(category) {
-    var language = translations[currentLanguage] || {};
-    var translatedSkill = (language.skills && language.skills[category.code]) || {};
-    return Object.assign({}, category, translatedSkill);
-  }
-
   function usesTechnicalContributionLabel(project) {
     return project.id === "ue5-environment-systems";
   }
 
   function getCardContributionLabel(project) {
+    if (project.id === "ue5-individual-game") return translate("card.coreDesign");
     return translate(
       usesTechnicalContributionLabel(project)
         ? "card.contribution"
@@ -200,26 +193,6 @@
       .join("");
   }
 
-  function renderSkills() {
-    skillsGrid.innerHTML = skills
-      .map(localizeSkill)
-      .map(function (category) {
-        return (
-          '<article class="skill-card">' +
-          '<div class="skill-card-heading"><span>' +
-          escapeHtml(category.code) +
-          "</span><h3>" +
-          escapeHtml(category.title) +
-          "</h3></div>" +
-          '<div class="skill-items">' +
-          renderTags(category.items) +
-          "</div>" +
-          "</article>"
-        );
-      })
-      .join("");
-  }
-
   function renderLinks(links) {
     return links
       .map(function (link) {
@@ -313,6 +286,18 @@
 
     project = localizeProject(project);
     activeTrigger = trigger;
+    if (project.id === "ue5-environment-systems" || project.id === "ue5-individual-game") {
+      var isBrokenThrone = project.id === "ue5-individual-game";
+      window.SkyfireReader.open({ modal: modal, content: modalContent,
+        links: renderLinks(isBrokenThrone ? project.links.filter(function (link) { return !link.video; }) : project.links),
+        videoLinks: isBrokenThrone ? renderLinks(project.links.filter(function (link) { return link.video; })) : "",
+        document: project.id === "ue5-individual-game" ? window.BROKEN_THRONE_DOCUMENT : window.SKYFIRE_DOCUMENT });
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+      modalClose.focus();
+      return;
+    }
     modalContent.innerHTML =
       '<div class="modal-hero">' +
       '<p class="project-type">' +
@@ -373,6 +358,7 @@
   }
 
   function closeModal() {
+    window.SkyfireReader.close();
     modal.classList.remove("is-open");
     modal.setAttribute("aria-hidden", "true");
     document.body.classList.remove("modal-open");
@@ -493,7 +479,6 @@
 
     applyStaticTranslations();
     renderProjects();
-    renderSkills();
   }
 
   function getInitialLanguage() {

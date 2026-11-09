@@ -602,21 +602,24 @@ html[lang="zh-CN"] .projects-aside {
   max-width: 430px;
 }
 
-.about-grid {
-  display: grid;
-  max-width: 970px;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 48px;
+.about.section-block {
+  padding-block: clamp(40px, 5vw, 64px);
 }
 
-.about-grid p {
+.about .section-heading {
+  margin-bottom: 20px;
+}
+
+.about-copy {
+  max-width: 780px;
+  text-align: left;
+}
+
+.about-copy p {
   margin: 0;
   color: var(--muted);
   font-size: 1.03rem;
-}
-
-.about-grid strong {
-  color: var(--text);
+  line-height: 1.9;
 }
 
 .project-grid {
@@ -625,8 +628,7 @@ html[lang="zh-CN"] .projects-aside {
   gap: 18px;
 }
 
-.project-card,
-.skill-card {
+.project-card {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -775,8 +777,7 @@ html[lang="zh-CN"] .projects-aside {
   font-size: 0.62rem;
 }
 
-.tag-list,
-.skill-items {
+.tag-list {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
@@ -829,42 +830,6 @@ html[lang="zh-CN"] .projects-aside {
 .details-button:focus-visible span {
   background: rgba(135, 224, 196, 0.12);
   transform: rotate(90deg);
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 15px;
-}
-
-.skill-card {
-  padding: 20px;
-}
-
-.skill-card-heading {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 16px;
-}
-
-.skill-card-heading span {
-  display: grid;
-  width: 34px;
-  height: 34px;
-  place-items: center;
-  border: 1px solid var(--line-bright);
-  border-radius: 9px;
-  color: var(--accent);
-  font-family: var(--mono);
-  font-size: 0.6rem;
-  font-weight: 700;
-}
-
-.skill-card h3 {
-  margin: 0;
-  font-size: 1rem;
-  letter-spacing: -0.02em;
 }
 
 .contact-panel {
@@ -1205,10 +1170,6 @@ html[lang="zh-CN"] .projects-aside {
     margin-inline: auto;
   }
 
-  .skills-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .contact-panel {
     grid-template-columns: 1fr;
     gap: 26px;
@@ -1318,14 +1279,8 @@ html[lang="zh-CN"] .projects-aside {
     margin-top: 15px;
   }
 
-  .about-grid,
-  .project-grid,
-  .skills-grid {
+  .project-grid {
     grid-template-columns: 1fr;
-  }
-
-  .about-grid {
-    gap: 19px;
   }
 
   .project-card-body {
